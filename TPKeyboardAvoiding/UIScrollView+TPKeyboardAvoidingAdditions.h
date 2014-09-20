@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@interface TPKeyboardAvoidingState : NSObject
+@property (nonatomic, assign) UIEdgeInsets priorInset;
+@property (nonatomic, assign) UIEdgeInsets priorScrollIndicatorInsets;
+@property (nonatomic, assign) BOOL         keyboardVisible;
+@property (nonatomic, assign) CGRect       keyboardRect;
+@property (nonatomic, assign) CGSize       priorContentSize;
+@end
+
 @interface UIScrollView (TPKeyboardAvoidingAdditions)
 - (BOOL)TPKeyboardAvoiding_focusNextTextField;
 - (void)TPKeyboardAvoiding_scrollToActiveTextField;
